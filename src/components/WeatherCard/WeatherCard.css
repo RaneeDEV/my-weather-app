@@ -1,0 +1,56 @@
+.card {
+  width: 630px;
+  min-height: 330px;
+  padding: 20px 10px;
+  margin: 200px auto;
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 7px;
+  box-shadow: 20px 20px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-info-wrapper,
+.card-degree-box,
+.weather-info-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1.region-title {
+  margin-bottom: 20px;
+}
+
+.left-weather-info {
+  width: 270px;
+  padding-right: 20px;
+}
+.card-degree-box {
+  margin: 20px 0;
+}
+
+.degree {
+  background-color: rgba(118, 216, 14, 0.5);
+  border-bottom: 2px solid rgb(25, 158, 21);
+  font-size: 32px;
+  padding: 5px 7px;
+}
+
+.card-weather-info-wrap > :nth-child(n + 2) {
+  margin-top: 25px;
+}
+
+.weather-info-box,
+.degree-weather-desc {
+  font-size: 13px;
+}
+
+.weather-info-title {
+  color: #444444;
+}
+
+.current-weather-info {
+  font-size: 15px;
+}
