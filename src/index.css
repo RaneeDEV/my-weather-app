@@ -198,13 +198,7 @@ body {
     'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(
-      45deg,
-      rgb(110, 151, 255),
-      rgb(95, 124, 253),
-      rgb(75, 117, 255)
-    )
-    no-repeat 0 0 / 100%;
+  background: url('../src/assets/img/bg.webp') no-repeat 0 0 / 100% 100%;
   min-height: 100vh;
 }
 
