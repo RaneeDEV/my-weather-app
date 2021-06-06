@@ -9,22 +9,22 @@ function WeatherCard({ city }) {
             <h1 className={styles["region-title"]}>{city.name}</h1>
             <span className={styles["card-date"]}>Чт, 3 июня, 20:36</span>
             <div className={styles["card-degree-box"]}>
-              <h2 className={styles["degree"]}>+11</h2>
+              <h2 className={styles["degree"]}>{city.wind}</h2>
               <div className={styles["degree-weather-current"]}>
                 {/* <img src="./" alt="weather image" /> */}
-                <span className={styles["degree-weather-desc"]}>Пасмурно</span>
+                <span className={styles["degree-weather-desc"]}>{city.weather.main}</span>
               </div>
             </div>
             <div className={styles["card-weather-info-wrap"]}>
               <div className={styles["weather-info-box"]}>
                 <p className={styles["weather-info-title"]}>По ощущению</p>
                 <span className={styles["dots"]}></span>
-                <span className={styles["current-weather-info"]}>+9</span>
+                <span className={styles["current-weather-info"]}>{city.main}</span>
               </div>
               <div className={styles["weather-info-box"]}>
                 <p className={styles["weather-info-title"]}>Ветер</p>
                 <span className={styles["dots"]}></span>
-                <span className={styles["current-weather-info"]}>9 м/с, С</span>
+                <span className={styles["current-weather-info"]}>{city.speed}</span>
               </div>
               <div className={styles["weather-info-box"]}>
                 <p className={styles["weather-info-title"]}>Давление</p>
