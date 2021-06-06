@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./SearchForm.css";
 
 import { getCurrentWeatherByName } from "../../api/oswm";
 import { useCities } from "./../../hooks/useWeatherData";
@@ -23,16 +24,17 @@ export default function SearchForm() {
   }
   return (
     <>
-      <form onSubmit={searchCity}>
+      <form onSubmit={searchCity} className="search-form">
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           type="search"
           name="search"
+          className="search-input"
           placeholder="Search city"
           required
         />
-        <button type="submit">Search</button>
+        <button type="submit" className="search-btn"><i class="fas fa-search"></i></button>
       </form>
     </>
   );

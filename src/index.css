@@ -54,7 +54,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-   background: rgba(0, 89, 255, 0.8);
+   background: linear-gradient(45deg, rgb(110, 151, 255), rgb(95, 124, 253), rgb(75, 117, 255)) no-repeat 0 0 / 100%;
+   min-height: 100vh;
 }
 
 code {
