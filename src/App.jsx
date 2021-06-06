@@ -1,12 +1,17 @@
-import './App.css';
-import WeatherCard from './components/WeatherCard/WeatherCard';
+import "./App.css";
+import React, { useEffect } from 'react'
+
+import CitiesList from "./components/CitiesList/CitiesList";
+import SearchForm from './components/SearchForm/SearchForm';
+import { useCities } from './hooks/useWeatherData';
 
 function App() {
   return (
     <>
-    <div className="container">
-    <WeatherCard/>
-    </div>
+      <div className="container">
+        <SearchForm></SearchForm>
+        <CitiesList />
+      </div>
     </>
   );
 }

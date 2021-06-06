@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import CitiesProvider from './hooks/useWeatherData';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <CitiesProvider>
+      <App />
+    </CitiesProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
