@@ -1,6 +1,6 @@
 import styles from "./WeatherCard.module.css";
 
-function WeatherCard({city}) {
+function WeatherCard({ city }) {
   return (
     <>
       <div className={styles["card"]}>
@@ -17,43 +17,37 @@ function WeatherCard({city}) {
             </div>
             <div className={styles["card-weather-info-wrap"]}>
               <div className={styles["weather-info-box"]}>
-                <p className={styles["weather-info-title"]}>
-                  <span>По ощущению</span>
-                </p>
+                <p className={styles["weather-info-title"]}>По ощущению</p>
                 <span className={styles["dots"]}></span>
                 <span className={styles["current-weather-info"]}>+9</span>
               </div>
               <div className={styles["weather-info-box"]}>
-                <p className={styles["weather-info-title"]}>
-                  <span>Ветер</span>
-                </p>
+                <p className={styles["weather-info-title"]}>Ветер</p>
                 <span className={styles["dots"]}></span>
                 <span className={styles["current-weather-info"]}>9 м/с, С</span>
               </div>
               <div className={styles["weather-info-box"]}>
-                <p className={styles["weather-info-title"]}>
-                  <span>Давление</span>
-                </p>
+                <p className={styles["weather-info-title"]}>Давление</p>
                 <span className={styles["dots"]}></span>
-                <span className={styles["current-weather-info"]}>755 мм рт. ст.</span>
+                <span className={styles["current-weather-info"]}>
+                  755 мм рт. ст.
+                </span>
               </div>
               <div className={styles["weather-info-box"]}>
-                <p className={styles["weather-info-title"]}>
-                  <span>Влажность</span>
-                </p>
+                <p className={styles["weather-info-title"]}>Влажность</p>
                 <span className={styles["dots"]}></span>
                 <span className={styles["current-weather-info"]}>94%</span>
               </div>
               <div className={styles["weather-info-box"]}>
                 <p className={styles["weather-info-title"]}>
-                  <span>Геомагнитная активность</span>
+                  Геомагнитная активность
                 </p>
+                <span className={styles["dots"]}></span>
                 <span className={styles["current-weather-info"]}>1 балл</span>
               </div>
               <div className={styles["weather-info-box"]}>
-                <p className={styles["weather-info-title"]}>
-                  <span>Температура воды</span>
-                </p>
+                <p className={styles["weather-info-title"]}>Температура воды</p>
+                <span className={styles["dots"]}></span>
                 <span className={styles["current-weather-info"]}>+16,6</span>
               </div>
             </div>

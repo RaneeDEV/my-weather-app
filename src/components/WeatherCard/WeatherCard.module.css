@@ -21,10 +21,10 @@
 }
 .dots{
  flex-grow: 1;
- height: 5px;
+ height: 4px;
  align-self: flex-end;
- /* background: url('../../assets/img/three-dots.svg');  */
-  background: radial-gradient( circle at 50% 50%, black 30%, transparent 30%) 0 0 / 5px 5px;
+ background: url('../../assets/dot.svg') repeat 0 0 / 6px;
+ margin: 0 5px;
 }
 h1.region-title {
   margin-bottom: 20px;
