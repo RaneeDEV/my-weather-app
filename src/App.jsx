@@ -1,9 +1,6 @@
-import "./App.css";
-import React, { useEffect } from 'react'
-
 import CitiesList from "./components/CitiesList/CitiesList";
 import SearchForm from './components/SearchForm/SearchForm';
-import { useCities } from './hooks/useWeatherData';
+import "./App.css";
 
 function App() {
   return (
