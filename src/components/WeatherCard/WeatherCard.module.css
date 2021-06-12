@@ -1,67 +1,79 @@
 .card {
-  width: 630px;
-  min-height: 330px;
-  padding: 25px 15px;
-  margin: 25px auto;
-  background-color: rgba(255, 255, 255, 0.4);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 2px;
-  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.25);
+  width: 800px;
+  margin: 120px auto;
+  background-color: rgb(250, 250, 250);
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: 0 0 30px 0 rgba(51, 51, 51, 0.2);
 }
 
-.card-info-wrapper,
-.card-degree-box,
-.weather-info-box {
+.card__header,
+.header__current-weather-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.dots {
+.card__header {
+  padding: 35px 50px 20px 40px;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(hsl(256, 50%, 45%) 0%, hsl(256, 30%, 40%) 100%);
+}
+
+.card__header_weather-degree {
+  font-size: 45px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.card__header_current-weather {
+  text-transform: uppercase;
+}
+
+.card__header_country {
+  font-size: 25px;
+  padding-bottom: 10px;
+  font-weight: 600;
+  position: relative;
+}
+
+.card__header_country::before {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  left: 50%;
+  bottom: 0;
+  border-radius: 20px;
+  transform: translateX(-50%);
+  background-color: #fff;
+}
+
+.card__body-left,
+.card__body-right {
+  width: 50%;
+  padding: 10px 20px;
+}
+
+.card__body-list_wrap{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.card__body-list_item{
+  font-weight: 600;
+}
+
+.dots{
   flex-grow: 1;
-  height: 4px;
+  height: 3px;
   align-self: flex-end;
+  margin: 0 7px;
   background: url('../../assets/img/dot.svg') repeat 0 0 / 6px;
-  margin: 0 5px;
 }
 
-h1.region-title {
-  margin-bottom: 20px;
-  font-size: 22px;
-  font-weight: bold;
-}
-
-.left-weather-info {
-  width: 270px;
-  padding-right: 30px;
-  border-right: 1px solid #333;
-}
-.card-degree-box {
-  margin: 20px 0;
-}
-
-.degree {
-  background-color: rgba(118, 216, 14, 0.5);
-  border-bottom: 2px solid rgb(25, 158, 21);
-  font-size: 35px;
-  padding: 5px 7px;
-}
-
-.card-weather-info-wrap > :nth-child(n + 2) {
-  margin-top: 25px;
-}
-
-.weather-info-box,
-.degree-weather-desc {
-  font-size: 14px;
-}
-
-.weather-info-title {
-  color: #333333;
-}
-
-.current-weather-info {
-  font-size: 15px;
+.card__body-list_wrap>:nth-child(n+2){
+  margin-top: 30px;
 }

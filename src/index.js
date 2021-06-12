@@ -4,11 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import CitiesProvider from './hooks/useWeatherData';
-
+import {
+  BrowserRouter,
+} from "react-router-dom";
 ReactDOM.render(
   <React.StrictMode>
     <CitiesProvider>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </CitiesProvider>
   </React.StrictMode>,
   document.getElementById('root')

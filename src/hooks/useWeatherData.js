@@ -9,13 +9,11 @@ export const useCities = () => useContext(CitiesContext)
 export default function CitiesProvider({ children }) {
     const [cities, dispatchCities] = useReducer(citiesReducer, [])
     useEffect(() => {
-        console.log('effect call');
         if (!window.localStorage.cities) {
             window.localStorage.cities = JSON.stringify([])
         }
         const savedCities = JSON.parse(window.localStorage.cities)
         dispatchCities({ type: 'INIT_SET', payload: savedCities })
-        console.log('INIT_SET');
 
         savedCities.forEach(async (city) => {
             if (!city.data) {
@@ -27,7 +25,6 @@ export default function CitiesProvider({ children }) {
     }, [])
 
     function citiesReducer(state, action) {
-        console.log('reducer call!', action.type);
         switch (action.type) {
             case 'INIT_SET':
                 return action.payload
@@ -39,10 +36,11 @@ export default function CitiesProvider({ children }) {
                 return newState
             }
             case 'ADD_CITY': {
-                console.log('ADD_CITY!!! start');
-                const newState = [...state, action.payload]
-                console.log('ADD_CITY!!! end');
-                return newState
+                const exist = state.findIndex(city => city.id === action.payload.id)
+                if (exist === -1) {
+                    return [...state, action.payload]
+                }
+                return state
             }
             default:
                 throw new Error('Wrong action type!')
