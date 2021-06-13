@@ -102,7 +102,7 @@ function WeatherCard({ city, single }) {
                 <dt className={styles["card__body-list_item"]}>Wind</dt>
                 <span className={styles["dots"]}></span>
                 <dd className={styles["card__body-list_value"]}>
-                  {city.data?.wind.speed} km/h
+                  {city.data?.wind.speed} m/s
                 </dd>
               </div>
               <div className={styles["card__body-list_wrap"]}>
