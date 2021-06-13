@@ -13,7 +13,7 @@ export default function Header() {
             </a>
             <div className="header-nav">
               <SearchForm></SearchForm>
-              <button onClick={() => history.push("/")}>Main</button>
+              <button className="main__btn" onClick={() => history.push("/")}><i class="fas fa-arrow-left"></i>To Main</button>
             </div>
           </nav>
         </div>

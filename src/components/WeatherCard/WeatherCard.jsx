@@ -75,63 +75,79 @@ function WeatherCard({ city, single }) {
               {city.data?.weather[0].main}
             </span>
             <br />
-            <img src={`https://openweathermap.org/img/w/${city.data?.weather[0].icon}.png`} alt="Weather Icon" width="50" height="50" loading="lazy"/>
+            <img
+              src={`https://openweathermap.org/img/w/${city.data?.weather[0].icon}.png`}
+              alt="Weather Icon"
+              width="50"
+              height="50"
+              loading="lazy"
+            />
           </div>
           <div className={styles["card__header-info"]}>
             <h2 className={styles["card__header_country"]}>{city.name}</h2>
           </div>
         </div>
-        <div className={styles["card__body-left"]}>
-          <dl className={styles["card__body-left_list"]}>
-            <div className={styles["card__body-list_wrap"]}>
-              <dt className={styles["card__body-list_item"]}>Feels like</dt>
-              <span className={styles["dots"]}></span>
-              <dd className={styles["card__body-list_value"]}>
-                {city.data?.main.feels_like.toFixed(0) > 0 && "+"}
-                {city.data?.main.feels_like.toFixed(0)}°
-              </dd>
-            </div>
-            <div className={styles["card__body-list_wrap"]}>
-              <dt className={styles["card__body-list_item"]}>Wind</dt>
-              <span className={styles["dots"]}></span>
-              <dd className={styles["card__body-list_value"]}>
-                {city.data?.wind.speed}
-              </dd>
-            </div>
-            <div className={styles["card__body-list_wrap"]}>
-              <dt className={styles["card__body-list_item"]}>Pressure</dt>
-              <span className={styles["dots"]}></span>
-              <dd className={styles["card__body-list_value"]}>
-                {city.data?.main.pressure}
-              </dd>
-            </div>
-            <div className={styles["card__body-list_wrap"]}>
-              <dt className={styles["card__body-list_item"]}>Humidity</dt>
-              <span className={styles["dots"]}></span>
-              <dd className={styles["card__body-list_value"]}>
-                {city.data?.main.humidity}
-              </dd>
-            </div>
-            <div className={styles["card__body-list_wrap"]}>
-              <dt className={styles["card__body-list_item"]}>Visibility</dt>
-              <span className={styles["dots"]}></span>
-              <dd className={styles["card__body-list_value"]}>
-                {city.data?.visibility}
-              </dd>
-            </div>
-          </dl>
+        <div className={styles["card__body"]}>
+          <div className={styles["card__body-left"]}>
+            <dl className={styles["card__body-left_list"]}>
+              <div className={styles["card__body-list_wrap"]}>
+                <dt className={styles["card__body-list_item"]}>Feels like</dt>
+                <span className={styles["dots"]}></span>
+                <dd className={styles["card__body-list_value"]}>
+                  {city.data?.main.feels_like.toFixed(0) > 0 && "+"}
+                  {city.data?.main.feels_like.toFixed(0)}°C
+                </dd>
+              </div>
+              <div className={styles["card__body-list_wrap"]}>
+                <dt className={styles["card__body-list_item"]}>Wind</dt>
+                <span className={styles["dots"]}></span>
+                <dd className={styles["card__body-list_value"]}>
+                  {city.data?.wind.speed} km/h
+                </dd>
+              </div>
+              <div className={styles["card__body-list_wrap"]}>
+                <dt className={styles["card__body-list_item"]}>Pressure</dt>
+                <span className={styles["dots"]}></span>
+                <dd className={styles["card__body-list_value"]}>
+                  {(city.data?.main.pressure / 1.333).toFixed(0)} mmHg Art.
+                </dd>
+              </div>
+              <div className={styles["card__body-list_wrap"]}>
+                <dt className={styles["card__body-list_item"]}>Humidity</dt>
+                <span className={styles["dots"]}></span>
+                <dd className={styles["card__body-list_value"]}>
+                  {city.data?.main.humidity}%
+                </dd>
+              </div>
+              <div className={styles["card__body-list_wrap"]}>
+                <dt className={styles["card__body-list_item"]}>Visibility</dt>
+                <span className={styles["dots"]}></span>
+                <dd className={styles["card__body-list_value"]}>
+                  {city.data?.visibility / 1000} km
+                </dd>
+              </div>
+            </dl>
+          </div>
+          <div className={styles["card__body-right"]}></div>
         </div>
-        <div className={styles["card__body-right"]}></div>
-        <div className={styles["card__body-footer"]}></div>
+
+        <div className={styles["card__body-footer"]}>
+          {single && (
+            <button className={styles["footer__saved-btn"]} onClick={saveCity}>
+              Save{" "}
+              {cities.find((savedCity) => savedCity.id === city.id) &&
+                "(Already Saved !)"}
+            </button>
+          )}
+          {!single && (
+            <button className={styles["footer__saved-btn"]} onClick={() => history.push(`/city/${city.id}`)}>
+              See More Info ...
+            </button>
+          )}
+        </div>
       </div>
     </>
   );
 }
 
 export default WeatherCard;
-// {single && (
-//   <button onClick={saveCity}>Save {cities.find((savedCity) => savedCity.id === city.id) && "(Saved!)"}</button>
-// )}
-// {!single && (
-//   <button onClick={()=> history.push(`/city/${city.id}`)}>See more info</button>
-// )}

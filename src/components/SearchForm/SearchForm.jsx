@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./SearchForm.css";
 import { useHistory } from "react-router-dom";
 
 export default function SearchForm() {
@@ -18,10 +19,11 @@ export default function SearchForm() {
           onChange={(e) => setQuery(e.target.value)}
           type="search"
           name="search"
-          placeholder="Search city"
+          className="search__input"
+          placeholder="Search City"
           required
         />
-        <button type="submit">Search</button>
+        <button type="submit" className="search__btn"><i class="fas fa-search"></i></button>
       </form>
     </>
   );

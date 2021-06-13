@@ -245,7 +245,7 @@ body {
     'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background: linear-gradient(155deg, hsl(345, 75%, 70%), hsl(345, 100%, 75%)); */
+  background: url('../src/assets/img/bg.webp') no-repeat 0 0 / 100% 100%;
   min-height: 100vh;
 }
 
