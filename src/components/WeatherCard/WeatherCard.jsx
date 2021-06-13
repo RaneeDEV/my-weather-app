@@ -136,12 +136,12 @@ function WeatherCard({ city, single }) {
             <button className={styles["footer__saved-btn"]} onClick={saveCity}>
               Save{" "}
               {cities.find((savedCity) => savedCity.id === city.id) &&
-                "(Already Saved !)"}
+                <i className="fas fa-check"></i>}
             </button>
           )}
           {!single && (
             <button className={styles["footer__saved-btn"]} onClick={() => history.push(`/city/${city.id}`)}>
-              See More Info ...
+              <i className="fas fa-info-circle"></i>
             </button>
           )}
         </div>

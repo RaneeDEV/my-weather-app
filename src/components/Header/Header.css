@@ -1,7 +1,7 @@
 .header {
-  padding: 25px 0;
-  background-color: hsl(226, 30%, 32%);
-  box-shadow: 0 -10px 20px rgba(51, 51, 51, 0.5);
+  padding: 12px 0;
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0 -12px 20px rgba(51, 51, 51, 0.7);
   z-index: 9999;
   top: 0;
   position: sticky;
@@ -17,7 +17,7 @@
 .logo {
   font-size: 22px;
   font-weight: 600;
-  color: #fff;
+  color: #333;
 }
 
 .header-nav > :nth-child(n + 2) {
@@ -26,19 +26,17 @@
 
 .main__btn{
   cursor: pointer;
-  border: 1px solid hsl(226, 30%, 32%);
+  border: 3px solid transparent;
   padding: 10px 30px;
+  text-align: center;
   color: #fff;
   font-size: 15px;
-  border-radius: 999px;
-  background: linear-gradient(145deg, hsl(202, 80%, 45%) 0%, hsl(226, 80%, 50%) 100%);
+  background-color: hsl(220, 70%, 50%);
   transition: .25s;
 }
 
-.fa-arrow-left{
-  margin-right: 10px;
-}
-
 .main__btn:hover{
-  opacity: .7;
+  background-color: transparent;
+  color: hsl(220, 70%, 50%);
+  border: 3px solid currentColor;
 }

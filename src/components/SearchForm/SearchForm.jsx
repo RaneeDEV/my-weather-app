@@ -13,17 +13,17 @@ export default function SearchForm() {
   }
   return (
     <>
-      <form onSubmit={searchCity}>
+      <form onSubmit={searchCity} className="search__form">
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           type="search"
           name="search"
           className="search__input"
-          placeholder="Search City"
+          placeholder="Search City ..."
           required
         />
-        <button type="submit" className="search__btn"><i class="fas fa-search"></i></button>
+        <button type="submit" className="search__btn"><i className="fas fa-search"></i></button>
       </form>
     </>
   );

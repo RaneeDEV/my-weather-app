@@ -9,11 +9,11 @@ export default function Header() {
         <div className="container">
           <nav className="navbar">
             <a href="/" className="logo">
-              Weather App
+              Weather App 
             </a>
             <div className="header-nav">
               <SearchForm></SearchForm>
-              <button className="main__btn" onClick={() => history.push("/")}><i class="fas fa-arrow-left"></i>To Main</button>
+              <button className="main__btn" onClick={() => history.push("/")}><i className="fas fa-bookmark"></i></button>
             </div>
           </nav>
         </div>
